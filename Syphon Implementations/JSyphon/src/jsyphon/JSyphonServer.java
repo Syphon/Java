@@ -29,8 +29,6 @@ public class JSyphonServer {
 		System.out.println("Class loaded");
 	}
 
-
-
 	//Native method declaration
 	public native void initWithName(String name);
 

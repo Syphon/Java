@@ -253,7 +253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/JSyphon.bundle/\"\necho \"$SOURCE_ROOT/../native_libs/JSyphon.bundle\"\n\ncp -v -R \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\" \"$SOURCE_ROOT/../native_libs/\"";
+			shellScript = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/JSyphon.bundle/\"\necho \"$SOURCE_ROOT/../native_libs/JSyphon.bundle\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\" \"$SOURCE_ROOT/../native_libs/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
