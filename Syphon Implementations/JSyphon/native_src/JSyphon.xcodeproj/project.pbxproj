@@ -253,7 +253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/JSyphon.bundle/\"\necho \"$SOURCE_ROOT/../native_libs/JSyphon.bundle\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\" \"$SOURCE_ROOT/../native_libs/\"";
+			shellScript = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\"\necho \"$SOURCE_ROOT/../native_libs/JSyphon.bundle\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\" \"$SOURCE_ROOT/../native_libs/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -306,6 +306,7 @@
 				GCC_PREFIX_HEADER = JSyphon_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_NAME = JSyphon;
 				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = bundle;
@@ -327,6 +328,7 @@
 				GCC_PREFIX_HEADER = JSyphon_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_NAME = JSyphon;
 				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = bundle;
