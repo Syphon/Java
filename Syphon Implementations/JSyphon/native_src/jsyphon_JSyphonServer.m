@@ -79,7 +79,7 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_publishFrameTexture(JNIEnv * e
 JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonServer_bindToDrawFrameOfSize(JNIEnv * env, jobject jobj, jint sizeX, jint sizeY)
 {
     jboolean jbool = JNI_FALSE;
-    bool tf = NO;
+    BOOL tf = NO;
     
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	JNF_COCOA_ENTER(env);

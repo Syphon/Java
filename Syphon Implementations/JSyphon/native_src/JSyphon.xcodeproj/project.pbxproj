@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BB1278C1355324B0079EA84 /* jsyphon_JSyphonServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */; };
-		1BB127A4135532A30079EA84 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A1135532770079EA84 /* Syphon.framework */; };
-		1BB127A7135532BB0079EA84 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A6135532BB0079EA84 /* OpenGL.framework */; };
-		1BB127AB135532E10079EA84 /* Syphon.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A1135532770079EA84 /* Syphon.framework */; };
-		1BB127AD135532FD0079EA84 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127AC135532FD0079EA84 /* JavaVM.framework */; };
-		1BB127B3135533180079EA84 /* JavaNativeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */; };
-		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
-		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		1BB12929135611270079EA84 /* jsyphon_JSyphonServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */; };
+		1BB1292B135611510079EA84 /* jsyphon_JSyphonServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */; };
+		1BB129681356115B0079EA84 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A1135532770079EA84 /* Syphon.framework */; };
+		1BB129691356115B0079EA84 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		1BB1296A1356115B0079EA84 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A6135532BB0079EA84 /* OpenGL.framework */; };
+		1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127AC135532FD0079EA84 /* JavaVM.framework */; };
+		1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */; };
+		1BB1296E1356117A0079EA84 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1BB127A1135532770079EA84 /* Syphon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +25,7 @@
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* Syphon.framework */;
 			remoteInfo = Syphon;
 		};
-		1BB127A21355328D0079EA84 /* PBXContainerItemProxy */ = {
+		1BB1297D1356120B0079EA84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1BB12798135532770079EA84 /* Syphon.xcodeproj */;
 			proxyType = 1;
@@ -35,15 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1BB127B1135532FE0079EA84 /* Copy Frameworks */ = {
+		1BB12971135611AF0079EA84 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 16;
 			files = (
-				1BB127AB135532E10079EA84 /* Syphon.framework in Copy Frameworks */,
+				1BB1296E1356117A0079EA84 /* Syphon.framework in CopyFiles */,
 			);
-			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -59,22 +58,23 @@
 		1BB127A6135532BB0079EA84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
 		1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
+		1BB12926135611160079EA84 /* libJSyphon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libJSyphon.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		32DBCF630370AF2F00C91783 /* JSyphon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSyphon_Prefix.pch; sourceTree = "<group>"; };
-		8D5B49B6048680CD000E48DA /* JSyphon.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSyphon.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+		1BB12924135611160079EA84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
+			comments = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.dylib\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \"$SOURCE_ROOT/../native_libs/\"";
 			files = (
-				1BB127A4135532A30079EA84 /* Syphon.framework in Frameworks */,
-				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				1BB127A7135532BB0079EA84 /* OpenGL.framework in Frameworks */,
-				1BB127AD135532FD0079EA84 /* JavaVM.framework in Frameworks */,
-				1BB127B3135533180079EA84 /* JavaNativeFoundation.framework in Frameworks */,
+				1BB129681356115B0079EA84 /* Syphon.framework in Frameworks */,
+				1BB129691356115B0079EA84 /* Cocoa.framework in Frameworks */,
+				1BB1296A1356115B0079EA84 /* OpenGL.framework in Frameworks */,
+				1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */,
+				1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +145,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5B49B6048680CD000E48DA /* JSyphon.bundle */,
+				1BB12926135611160079EA84 /* libJSyphon.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,27 +168,37 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1BB12922135611160079EA84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BB12929135611270079EA84 /* jsyphon_JSyphonServer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		8D5B49AC048680CD000E48DA /* JSyphon */ = {
+		1BB12925135611160079EA84 /* libJSyphon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "JSyphon" */;
+			buildConfigurationList = 1BB1292A135611450079EA84 /* Build configuration list for PBXNativeTarget "libJSyphon" */;
 			buildPhases = (
-				8D5B49AF048680CD000E48DA /* Resources */,
-				8D5B49B1048680CD000E48DA /* Sources */,
-				8D5B49B3048680CD000E48DA /* Frameworks */,
-				1BB127B1135532FE0079EA84 /* Copy Frameworks */,
-				1BB12817135542590079EA84 /* ShellScript */,
+				1BB12922135611160079EA84 /* Headers */,
+				1BB12923135611160079EA84 /* Sources */,
+				1BB12924135611160079EA84 /* Frameworks */,
+				1BB12971135611AF0079EA84 /* CopyFiles */,
+				1BB12970135611910079EA84 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1BB127A31355328D0079EA84 /* PBXTargetDependency */,
+				1BB1297E1356120B0079EA84 /* PBXTargetDependency */,
 			);
-			name = JSyphon;
-			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = JSyphon;
-			productReference = 8D5B49B6048680CD000E48DA /* JSyphon.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = libJSyphon;
+			productName = libJSyphon;
+			productReference = 1BB12926135611160079EA84 /* libJSyphon.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -215,7 +225,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				8D5B49AC048680CD000E48DA /* JSyphon */,
+				1BB12925135611160079EA84 /* libJSyphon */,
 			);
 		};
 /* End PBXProject section */
@@ -230,19 +240,8 @@
 		};
 /* End PBXReferenceProxy section */
 
-/* Begin PBXResourcesBuildPhase section */
-		8D5B49AF048680CD000E48DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		1BB12817135542590079EA84 /* ShellScript */ = {
+		1BB12970135611910079EA84 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,26 +252,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\"\necho \"$SOURCE_ROOT/../native_libs/JSyphon.bundle\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/JSyphon.bundle\" \"$SOURCE_ROOT/../native_libs/\"";
+			shellScript = "#!/bin/bash\n\ninstall_name_tool -change @loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.dylib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \"$SOURCE_ROOT/../native_libs/\"\ncp -RfL \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8D5B49B1048680CD000E48DA /* Sources */ = {
+		1BB12923135611160079EA84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB1278C1355324B0079EA84 /* jsyphon_JSyphonServer.m in Sources */,
+				1BB1292B135611510079EA84 /* jsyphon_JSyphonServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1BB127A31355328D0079EA84 /* PBXTargetDependency */ = {
+		1BB1297E1356120B0079EA84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Syphon;
-			targetProxy = 1BB127A21355328D0079EA84 /* PBXContainerItemProxy */;
+			targetProxy = 1BB1297D1356120B0079EA84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -288,11 +287,13 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB913B08733D840010E9CD /* Debug */ = {
+		1BB12927135611170079EA84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../Syphon Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
@@ -303,35 +304,46 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = JSyphon_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				MACH_O_TYPE = mh_bundle;
-				PRODUCT_NAME = JSyphon;
-				VALID_ARCHS = "i386 x86_64";
-				WRAPPER_EXTENSION = bundle;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = libJSyphon;
 			};
 			name = Debug;
 		};
-		1DEB913C08733D840010E9CD /* Release */ = {
+		1BB12928135611170079EA84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../Syphon Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
 				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = JSyphon_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				MACH_O_TYPE = mh_bundle;
-				PRODUCT_NAME = JSyphon;
-				VALID_ARCHS = "i386 x86_64";
-				WRAPPER_EXTENSION = bundle;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = libJSyphon;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -364,11 +376,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "JSyphon" */ = {
+		1BB1292A135611450079EA84 /* Build configuration list for PBXNativeTarget "libJSyphon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB913B08733D840010E9CD /* Debug */,
-				1DEB913C08733D840010E9CD /* Release */,
+				1BB12927135611170079EA84 /* Debug */,
+				1BB12928135611170079EA84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
