@@ -24,7 +24,7 @@ public class JSyphonServer {
 
 		System.out.println("java path: " + System.getProperty("java.library.path"));
 
-		System.load("/Users/skyebook/Documents/Development/Java/Betaville/JSyphon/native_libs/JSyphon.so");
+		System.load("/SVNRepositories/Syphon Implementations/JSyphon/native_libs/JSyphon.bundle/Contents/MacOS/JSyphon");
 
 		System.out.println("Class loaded");
 	}

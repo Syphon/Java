@@ -94,9 +94,6 @@ public class ServerTest {
 
 			GL11.glBindTexture(GL31.GL_TEXTURE_RECTANGLE, intBuff.get(0));
 
-			System.out.println("intBuff[0]: " + intBuff.get(0));
-
-
 
 			//GL11.glTexImage2D(GL11.GL_TEXTURE_2D, 0, GL11.GL_RGBA8, dims.get(2), dims.get(3), 0, GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, dummy);
 			GL11.glTexImage2D(GL31.GL_TEXTURE_RECTANGLE, 0, GL11.GL_RGBA8, 800, 600, 0, GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, dummy);
