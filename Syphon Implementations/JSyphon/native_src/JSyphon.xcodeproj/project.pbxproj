@@ -284,7 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\ninstall_name_tool -change @loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.dylib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \"$SOURCE_ROOT/../native_libs/\"\ncp -RfL \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"";
+			shellScript = "#!/bin/bash\n\ninstall_name_tool -change @loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.dylib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\ncp -Rf \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \"$SOURCE_ROOT/../native_libs/\"\ncp -Rf \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -390,6 +390,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -402,6 +403,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
