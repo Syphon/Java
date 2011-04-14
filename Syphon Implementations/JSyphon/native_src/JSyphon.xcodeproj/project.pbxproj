@@ -15,6 +15,8 @@
 		1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127AC135532FD0079EA84 /* JavaVM.framework */; };
 		1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */; };
 		1BB1296E1356117A0079EA84 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1BB127A1135532770079EA84 /* Syphon.framework */; };
+		1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */; };
+		1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
 		1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
 		1BB12926135611160079EA84 /* libJSyphon.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libJSyphon.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonClient.h; sourceTree = "<group>"; };
+		1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonImage.h; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* JSyphon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSyphon_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -115,8 +119,9 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */,
-				1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */,
+				1BB129E01356E7A10079EA84 /* Client */,
+				1BB129DF1356E79A0079EA84 /* Image */,
+				1BB129D51356E7780079EA84 /* Server */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -158,6 +163,31 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1BB129D51356E7780079EA84 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */,
+				1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		1BB129DF1356E79A0079EA84 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		1BB129E01356E7A10079EA84 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB12929135611270079EA84 /* jsyphon_JSyphonServer.h in Headers */,
+				1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */,
+				1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
