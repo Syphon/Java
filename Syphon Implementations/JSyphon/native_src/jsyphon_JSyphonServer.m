@@ -16,8 +16,10 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_initWithName (JNIEnv * env, jo
     
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	CGLContextObj cgl_ctx = CGLGetCurrentContext();
-    
-	_myServer = [[SyphonServer alloc] initWithName:@"HardCoded" context:cgl_ctx options:nil];
+
+    NSString* sname = JNFJavaToNSString(env, name);
+
+	_myServer = [[SyphonServer alloc] initWithName:sname context:cgl_ctx options:nil];
     
 	[pool drain];
 	JNF_COCOA_EXIT(env);

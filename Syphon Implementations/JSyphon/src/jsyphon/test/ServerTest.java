@@ -43,7 +43,7 @@ public class ServerTest {
 
 		// init OpenGL here
 
-		server.initWithName("df");
+		server.initWithName("Server Test");
 		//IntBuffer dims = ByteBuffer.allocateDirect(16).order(ByteOrder.nativeOrder()).asIntBuffer();
 
 		//IntBuffer dims = IntBuffer.allocate(16);
