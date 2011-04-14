@@ -71,8 +71,8 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_publishFrameTexture(JNIEnv * e
 	
 	GLuint textureID = texID ;
 	GLuint textureTarget = texTarget;
-		
-	[_myServer publishFrameTexture:textureID textureTarget:textureTarget imageRegion:rect textureDimensions:size flipped:(isFlipped == JNI_TRUE)];
+    if([_myServer hasClients])
+        [_myServer publishFrameTexture:textureID textureTarget:textureTarget imageRegion:rect textureDimensions:size flipped:(isFlipped == JNI_TRUE)];
 	
 	JNF_COCOA_EXIT(env);
 	[pool drain];
