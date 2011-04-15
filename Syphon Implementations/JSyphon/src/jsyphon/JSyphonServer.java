@@ -34,6 +34,7 @@ public class JSyphonServer
 {
 	public JSyphonServer()
 	{
+		System.out.println("New JSyphon Instance");
 	}
 
 	//Load the library
@@ -44,6 +45,13 @@ public class JSyphonServer
 		System.loadLibrary("JSyphon");		
 		System.out.println("JSyphon Loaded");
 	}
+	
+	public void test()
+	{
+		System.out.println("This is the test method");
+	}
+	
+
 
 	//Native method declarations
 	

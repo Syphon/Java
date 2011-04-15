@@ -8,7 +8,7 @@ public class JSyphonClient
 	public JSyphonClient()
 	{
 	}
-
+	
 	//Load the library
 	static
 	{

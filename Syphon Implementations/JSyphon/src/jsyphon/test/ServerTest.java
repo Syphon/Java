@@ -101,7 +101,7 @@ public class ServerTest {
 
 			//server.publishFrameTexture(intBuff.get(0), GL11.GL_TEXTURE_2D, 0, 0, dims.get(2), dims.get(3), dims.get(2), dims.get(3), false);
 			server.publishFrameTexture(intBuff.get(0), target, 0, 0, 800, 600, 800, 600, false);
-
+			
 			GL11.glDeleteTextures(intBuff.get(0));
 
 			intBuff.clear();
