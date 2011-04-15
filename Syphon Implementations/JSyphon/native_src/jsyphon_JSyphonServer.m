@@ -23,7 +23,7 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_initWithName (JNIEnv * env, jo
     
 	[pool drain];
 	JNF_COCOA_EXIT(env);
-    
+
 	return;
 }
 
