@@ -1,0 +1,42 @@
+<project name="JSyphonJar" default="clean" basedir="../">
+
+<!--	
+		Simple ant build file that generates the jsyphon jar file
+		to include in other Java applications or packages.
+-->
+	
+	<property name="project.name" value="jsyphon"/>	
+	<property name="project.jar.name" value="${project.name}.jar"/>
+	<property name="project.src" location="src"/>
+	<property name="project.bin" location="bin"/>
+	<property name="project.bin.util" location="${project.bin}/util"/>
+	<property name="project.dist" location="distribution"/>
+
+	<target name="init"> 	
+	  <delete dir="${project.bin}"/>
+	  <delete dir="${project.dist}"/>		
+	  <mkdir dir="${project.bin}"/>
+      <mkdir dir="${project.dist}"/>		
+	</target>
+	
+	<target name="compile">
+	  <javac srcdir="${project.src}" destdir="${project.bin}" source="1.5" target="1.5">
+	  	<include name="jsyphon/*.java" />
+	  	<include name="jsyphon/util/*.java" />	  	
+	  </javac>	
+	</target>
+			
+	<target name="makejar">
+	  <jar jarfile="${project.dist}/${project.jar.name}" basedir="${project.bin}"/>
+	</target>
+	
+	<target name="clean">
+	  <echo>Creating jsyphon jar...
+	  </echo>
+	  <antcall target="init" />
+	  <antcall target="compile" />
+	  <antcall target="makejar" />
+	  <echo>Done.</echo>
+	</target>	
+	
+</project>
