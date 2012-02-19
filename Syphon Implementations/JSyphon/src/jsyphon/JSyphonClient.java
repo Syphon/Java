@@ -7,6 +7,7 @@ public class JSyphonClient
 {
 	public JSyphonClient()
 	{
+	  System.out.println("New JSyphon Instance");
 	}
 	
 	//Load the library
@@ -25,19 +26,15 @@ public class JSyphonClient
 	
 	public native void setServerName(String serverName);
 	
-	
-	public native void initWithServerDescriptionAndOptions(Dictionary<String, String> description, Dictionary<String, String> options);
-
 	public native boolean isValid();
+
+  public native Dictionary<String, String> serverDescription();
 	
-	public native Dictionary<String, String> serverDescription();
-	
-	
-	public native boolean hasNewFrame();
-	
-	
+  public native boolean hasNewFrame();
+  
 	public native JSyphonImage newFrameImageForContext();
 	
+	public native Dictionary<String, Integer> newFrameDataForContext();
 
 	public native void stop();	
 }

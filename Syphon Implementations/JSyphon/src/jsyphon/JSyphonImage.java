@@ -19,6 +19,4 @@ public class JSyphonImage
 	public native int textureName();
 	public native int textureWidth();
 	public native int textureHeight();
-	
-	
 }

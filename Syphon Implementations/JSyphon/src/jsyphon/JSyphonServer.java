@@ -46,13 +46,6 @@ public class JSyphonServer
 		System.out.println("JSyphon Loaded");
 	}
 	
-	public void test()
-	{
-		System.out.println("This is the test method");
-	}
-	
-
-
 	//Native method declarations
 	
 	// TODO: move this to the constuctor?

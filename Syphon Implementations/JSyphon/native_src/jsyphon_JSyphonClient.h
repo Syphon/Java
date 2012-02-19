@@ -33,14 +33,6 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setServerName
 
 /*
  * Class:     jsyphon_JSyphonClient
- * Method:    initWithServerDescriptionAndOptions
- * Signature: (Ljava/util/Dictionary;Ljava/util/Dictionary;)V
- */
-JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_initWithServerDescriptionAndOptions
-  (JNIEnv *, jobject, jobject, jobject);
-
-/*
- * Class:     jsyphon_JSyphonClient
  * Method:    isValid
  * Signature: ()Z
  */
@@ -69,6 +61,14 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame
  * Signature: ()Ljsyphon/JSyphonImage;
  */
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     jsyphon_JSyphonClient
+ * Method:    newFrameDataForContext
+ * Signature: ()Ljava/util/Dictionary;
+ */
+JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext
   (JNIEnv *, jobject);
 
 /*
