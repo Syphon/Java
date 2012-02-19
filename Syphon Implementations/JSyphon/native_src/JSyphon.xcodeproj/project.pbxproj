@@ -17,6 +17,10 @@
 		1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */; };
 		1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */; };
 		1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */; };
+		41B03CC913CD8D9200CE4F36 /* SyIStopwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B03CC513CD8D9200CE4F36 /* SyIStopwatch.h */; };
+		41B03CCA13CD8D9200CE4F36 /* SyIStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B03CC613CD8D9200CE4F36 /* SyIStopwatch.m */; };
+		41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */; };
+		41B03CCC13CD8D9200CE4F36 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B03CC813CD8D9200CE4F36 /* SyphonNameboundClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +61,8 @@
 		1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonServer.h; sourceTree = "<group>"; };
 		1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonServer.m; sourceTree = "<group>"; };
 		1BB12798135532770079EA84 /* Syphon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Syphon.xcodeproj; path = "../../../Syphon Framework/Syphon.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		1BB127A6135532BB0079EA84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = System/Library/Frameworks/JavaVM.framework; sourceTree = SDKROOT; };
+		1BB127A6135532BB0079EA84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
 		1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
 		1BB12926135611160079EA84 /* libJSyphon.jnilib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libJSyphon.jnilib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonClient.h; sourceTree = "<group>"; };
@@ -66,6 +70,10 @@
 		1BB12A0B13576F0C0079EA84 /* jsyphon_JSyphonImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonImage.m; sourceTree = "<group>"; };
 		1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonClient.m; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* JSyphon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSyphon_Prefix.pch; sourceTree = "<group>"; };
+		41B03CC513CD8D9200CE4F36 /* SyIStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyIStopwatch.h; sourceTree = "<group>"; };
+		41B03CC613CD8D9200CE4F36 /* SyIStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyIStopwatch.m; sourceTree = "<group>"; };
+		41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonNameboundClient.h; sourceTree = "<group>"; };
+		41B03CC813CD8D9200CE4F36 /* SyphonNameboundClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyphonNameboundClient.m; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -195,10 +203,23 @@
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				41B03CC413CD8D9200CE4F36 /* Shared */,
 				32DBCF630370AF2F00C91783 /* JSyphon_Prefix.pch */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
+		};
+		41B03CC413CD8D9200CE4F36 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				41B03CC513CD8D9200CE4F36 /* SyIStopwatch.h */,
+				41B03CC613CD8D9200CE4F36 /* SyIStopwatch.m */,
+				41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */,
+				41B03CC813CD8D9200CE4F36 /* SyphonNameboundClient.m */,
+			);
+			name = Shared;
+			path = ../../Shared;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -209,6 +230,8 @@
 			files = (
 				1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */,
 				1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */,
+				41B03CC913CD8D9200CE4F36 /* SyIStopwatch.h in Headers */,
+				41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +268,6 @@
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "JSyphon" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -301,6 +323,8 @@
 			files = (
 				1BB1292B135611510079EA84 /* jsyphon_JSyphonServer.m in Sources */,
 				1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */,
+				41B03CCA13CD8D9200CE4F36 /* SyIStopwatch.m in Sources */,
+				41B03CCC13CD8D9200CE4F36 /* SyphonNameboundClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,7 @@
 					"\"$(SRCROOT)/../../../Syphon Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)/../../../Syphon Framework/build/Release\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -368,6 +393,7 @@
 					"\"$(SRCROOT)/../../../Syphon Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
+					"\"$(SRCROOT)/../../../Syphon Framework/build/Release\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -404,7 +430,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;

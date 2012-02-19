@@ -9,6 +9,30 @@ extern "C" {
 #endif
 /*
  * Class:     jsyphon_JSyphonClient
+ * Method:    init
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_init
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     jsyphon_JSyphonClient
+ * Method:    setApplicationName
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setApplicationName
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     jsyphon_JSyphonClient
+ * Method:    setServerName
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setServerName
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     jsyphon_JSyphonClient
  * Method:    initWithServerDescriptionAndOptions
  * Signature: (Ljava/util/Dictionary;Ljava/util/Dictionary;)V
  */
