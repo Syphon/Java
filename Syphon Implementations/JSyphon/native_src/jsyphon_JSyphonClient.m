@@ -144,6 +144,8 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext(JNI
 	//[coercer addCoercion:[[[JNFVectorCoercion alloc] init] autorelease] forNSClass:[SyphonImage class] javaClass:@"jsyphon/JSyphonImage"];	
     //frameimg = [coecer coerceNSObject:img withEnv:env];	
 	
+	[(SyphonImage*)img release];
+	
 	[(SyphonNameboundClient*)mClient unlockClient];
 	
 	JNF_COCOA_EXIT(env);
@@ -181,6 +183,8 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
     [JNFDefaultCoercions addMapCoercionTo:coecer];
     
     imgdata = [coecer coerceNSObject:dic withEnv:env];
+	
+	[(SyphonImage*)img release];
 	
 	[(SyphonNameboundClient*)mClient unlockClient];	
 	
