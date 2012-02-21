@@ -2,6 +2,29 @@ package jsyphon;
 
 public class JSyphonImage
 {
+  private int name;
+  private int width;
+  private int height;
+  
+  public JSyphonImage(int name, int width, int height) {
+    this.name = name;
+    this.width = width;
+    this.height = height;
+  }
+  
+  public int textureName() {
+    return name;
+  }
+  
+  public int textureWidth() {
+    return width;
+  }
+  
+  public int textureHeight() {
+    return height;
+  }  
+  
+  /*
 	public JSyphonImage()
 	{
 	}
@@ -19,4 +42,5 @@ public class JSyphonImage
 	public native int textureName();
 	public native int textureWidth();
 	public native int textureHeight();
+	*/
 }

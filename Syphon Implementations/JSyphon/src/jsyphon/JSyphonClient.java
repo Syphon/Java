@@ -32,9 +32,15 @@ public class JSyphonClient
 	
   public native boolean hasNewFrame();
   
-	public native JSyphonImage newFrameImageForContext();
-	
-	public native Dictionary<String, Integer> newFrameDataForContext();
-
-	public native void stop();	
+  public native Dictionary<String, Object> newFrameDataForContext();
+  
+  public native void stop();
+  
+	public JSyphonImage newFrameImageForContext() {
+	  Dictionary<String, Object> dict = newFrameDataForContext();
+	  Long name = (Long)dict.get("name");
+	  Double width = (Double)dict.get("width");
+	  Double height = (Double)dict.get("height");
+	  return new JSyphonImage(name.intValue(), width.intValue(), height.intValue());
+	}
 }

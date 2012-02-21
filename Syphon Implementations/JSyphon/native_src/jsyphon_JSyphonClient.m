@@ -121,7 +121,8 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame(JNIEnv * env, 
     return val;    
 }
 
-
+// Commented out until we figure out how to properly coerce arbitrary objects from Objective-C to Java
+/*
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext(JNIEnv * env, jobject jobj)
 {
 	jobject frameimg = nil;
@@ -153,6 +154,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext(JNI
 	
 	return frameimg;	
 }
+ */
 
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIEnv * env, jobject jobj)
 {
@@ -166,6 +168,8 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
 	
 	SyphonImage* img = [client newFrameImageForContext:CGLGetCurrentContext()];	
 
+//	NSLog(@"the syphon image at newFrameDataForContext = %@", img);
+		
 	NSSize texSize = [img textureSize];
 
 	NSNumber *name = [NSNumber numberWithInt:[img textureName]];

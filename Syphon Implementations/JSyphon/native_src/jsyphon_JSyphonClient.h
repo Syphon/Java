@@ -57,14 +57,6 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame
 
 /*
  * Class:     jsyphon_JSyphonClient
- * Method:    newFrameImageForContext
- * Signature: ()Ljsyphon/JSyphonImage;
- */
-JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext
-  (JNIEnv *, jobject);
-
-/*
- * Class:     jsyphon_JSyphonClient
  * Method:    newFrameDataForContext
  * Signature: ()Ljava/util/Dictionary;
  */
