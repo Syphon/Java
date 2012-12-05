@@ -15,10 +15,16 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonServerList_getList(JNIEnv * env, j
     JNF_COCOA_ENTER(env);    
     NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	
+    [[SyphonServerDirectory sharedDirectory] addObserver:nil forKeyPath:@"servers" options:0 context:nil];
+	
+	NSLog(@"Getting list of servers");
 	NSArray *servers = [[SyphonServerDirectory sharedDirectory] servers];
 	NSMutableArray *output = [NSMutableArray arrayWithCapacity:[servers count]];
+    NSLog(@"Number of servers %i", [servers count]);	
+	
 	for (NSDictionary *description in servers)
 	{
+		NSLog(@"Adding server = %@", description);
 		NSDictionary *simple = [NSDictionary dictionaryWithObjectsAndKeys:[description objectForKey:SyphonServerDescriptionNameKey], @"Name",
 								[description objectForKey:SyphonServerDescriptionAppNameKey], @"App Name", nil];
 		[output addObject:simple];
