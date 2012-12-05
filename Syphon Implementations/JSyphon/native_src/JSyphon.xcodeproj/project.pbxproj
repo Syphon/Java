@@ -17,6 +17,8 @@
 		1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */; };
 		1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */; };
 		1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */; };
+		415E166D166FC3830060AAB9 /* jsyphon_JSyphonServerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 415E166C166FC3830060AAB9 /* jsyphon_JSyphonServerList.m */; };
+		41928310166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4192830F166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h */; };
 		41B03CC913CD8D9200CE4F36 /* SyIStopwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B03CC513CD8D9200CE4F36 /* SyIStopwatch.h */; };
 		41B03CCA13CD8D9200CE4F36 /* SyIStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B03CC613CD8D9200CE4F36 /* SyIStopwatch.m */; };
 		41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */; };
@@ -70,6 +72,8 @@
 		1BB12A0B13576F0C0079EA84 /* jsyphon_JSyphonImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonImage.m; sourceTree = "<group>"; };
 		1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonClient.m; sourceTree = "<group>"; };
 		32DBCF630370AF2F00C91783 /* JSyphon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSyphon_Prefix.pch; sourceTree = "<group>"; };
+		415E166C166FC3830060AAB9 /* jsyphon_JSyphonServerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonServerList.m; sourceTree = "<group>"; };
+		4192830F166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonServerList.h; sourceTree = "<group>"; };
 		41B03CC513CD8D9200CE4F36 /* SyIStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyIStopwatch.h; sourceTree = "<group>"; };
 		41B03CC613CD8D9200CE4F36 /* SyIStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyIStopwatch.m; sourceTree = "<group>"; };
 		41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyphonNameboundClient.h; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				415E166B166FC3420060AAB9 /* ServerList */,
 				1BB129E01356E7A10079EA84 /* Client */,
 				1BB129DF1356E79A0079EA84 /* Image */,
 				1BB129D51356E7780079EA84 /* Server */,
@@ -209,6 +214,15 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		415E166B166FC3420060AAB9 /* ServerList */ = {
+			isa = PBXGroup;
+			children = (
+				4192830F166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h */,
+				415E166C166FC3830060AAB9 /* jsyphon_JSyphonServerList.m */,
+			);
+			name = ServerList;
+			sourceTree = "<group>";
+		};
 		41B03CC413CD8D9200CE4F36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +246,7 @@
 				1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */,
 				41B03CC913CD8D9200CE4F36 /* SyIStopwatch.h in Headers */,
 				41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */,
+				41928310166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +340,7 @@
 				1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */,
 				41B03CCA13CD8D9200CE4F36 /* SyIStopwatch.m in Sources */,
 				41B03CCC13CD8D9200CE4F36 /* SyphonNameboundClient.m in Sources */,
+				415E166D166FC3830060AAB9 /* jsyphon_JSyphonServerList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
