@@ -1,6 +1,6 @@
 package jsyphon;
-import java.util.Dictionary;
 
+import java.util.HashMap;
 import jsyphon.JSyphonImage;
 
 public class JSyphonClient
@@ -28,16 +28,16 @@ public class JSyphonClient
 	
 	public native boolean isValid();
 
-  public native Dictionary<String, String> serverDescription();
+  public native HashMap<String, String> serverDescription();
 	
   public native boolean hasNewFrame();
   
-  public native Dictionary<String, Object> newFrameDataForContext();
+  public native HashMap<String, Object> newFrameDataForContext();
   
   public native void stop();
   
 	public JSyphonImage newFrameImageForContext() {
-	  Dictionary<String, Object> dict = newFrameDataForContext();
+	  HashMap<String, Object> dict = newFrameDataForContext();
 	  Long name = (Long)dict.get("name");
 	  Double width = (Double)dict.get("width");
 	  Double height = (Double)dict.get("height");

@@ -1,7 +1,7 @@
 package jsyphon;
 
 import java.util.ArrayList;
-import java.util.Dictionary;
+import java.util.HashMap;
 
 public class JSyphonServerList {
 //  public JSyphonServerList() 
@@ -18,5 +18,5 @@ public class JSyphonServerList {
 //    System.out.println("JSyphon Loaded");
   }
   
-  static public native ArrayList<Dictionary<String, String>> getList();
+  static public native ArrayList<HashMap<String, String>> getList();
 }
