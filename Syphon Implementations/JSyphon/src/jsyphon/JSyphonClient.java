@@ -5,18 +5,11 @@ import jsyphon.JSyphonImage;
 
 public class JSyphonClient
 {
-	public JSyphonClient()
-	{
-	  System.out.println("New JSyphon Instance");
-	}
+	public JSyphonClient() { }
 	
-	//Load the library
 	static
 	{
-		System.out.println("Loading JSyphon");
-		System.out.println("Java Library Path: " + System.getProperty("java.library.path"));
 		System.loadLibrary("JSyphon");		
-		System.out.println("JSyphon Loaded");
 	}
 
 	//Native method declarations

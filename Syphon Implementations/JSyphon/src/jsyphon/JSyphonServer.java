@@ -32,18 +32,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 public class JSyphonServer
 {
-	public JSyphonServer()
-	{
-		System.out.println("New JSyphon Instance");
-	}
+	public JSyphonServer() { }
 
-	//Load the library
 	static
 	{
-		System.out.println("Loading JSyphon");
-		System.out.println("Java Library Path: " + System.getProperty("java.library.path"));
 		System.loadLibrary("JSyphon");		
-		System.out.println("JSyphon Loaded");
 	}
 	
 	//Native method declarations
