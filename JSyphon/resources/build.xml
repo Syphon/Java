@@ -1,4 +1,4 @@
-<project name="JSyphonJar" default="clean" basedir="../">
+<project name="Syphon for Java" default="clean" basedir="../">
 
 <!--	
 		Simple ant build file that generates the jsyphon jar file
@@ -20,7 +20,7 @@
 	</target>
 	
 	<target name="compile">
-	  <javac srcdir="${project.src}" destdir="${project.bin}" source="1.5" target="1.5">
+	  <javac srcdir="${project.src}" destdir="${project.bin}" source="1.6" target="1.6" includeantruntime="false">
 	  	<include name="jsyphon/*.java" />
 	  	<include name="jsyphon/util/*.java" />	  	
 	  </javac>	

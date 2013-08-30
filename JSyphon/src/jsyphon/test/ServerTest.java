@@ -1,4 +1,5 @@
 package jsyphon.test;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
@@ -9,7 +10,6 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL31;
 
 /**
  * 
@@ -126,5 +126,4 @@ public class ServerTest {
 		t.start();
 
 	}
-
 }
