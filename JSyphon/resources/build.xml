@@ -10,7 +10,7 @@
 	<property name="project.src" location="src"/>
 	<property name="project.bin" location="bin"/>
 	<property name="project.bin.util" location="${project.bin}/util"/>
-	<property name="project.dist" location="distribution"/>
+	<property name="project.dist" location="jar"/>
 
 	<target name="init"> 	
 	  <delete dir="${project.bin}"/>
