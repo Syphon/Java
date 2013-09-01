@@ -22,7 +22,7 @@ The Test package for JSyphon relies on LWJGL, so if you want to use our test cla
 Getting Started:
 ====
 
-* Make sure that you have also cloned the Syphon-Framework and Shared repos, and they are located at the same level as Java
+* Make sure that you have also cloned the Syphon-Framework and Shared repos, and that they are located inside the same folder as Java
 
 * Build jsyphon.jar, by running the build script inside the ant folder. The resulting jar file will be placed inside the jar folder.
 
@@ -36,4 +36,5 @@ Acknowledgments
 ====
 
 Initial JSyphon implementation by Skye Book and Anton Marini.
+
 Further refinements by Andres Colubri (server listing, etc).
