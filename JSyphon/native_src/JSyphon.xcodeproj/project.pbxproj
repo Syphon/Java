@@ -45,13 +45,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		1BB12971135611AF0079EA84 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
 				1BB1296E1356117A0079EA84 /* Syphon.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -62,7 +62,7 @@
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonServer.h; sourceTree = "<group>"; };
 		1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonServer.m; sourceTree = "<group>"; };
-		1BB12798135532770079EA84 /* Syphon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Syphon.xcodeproj; path = "../../../Syphon Framework/Syphon.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		1BB12798135532770079EA84 /* Syphon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Syphon.xcodeproj; path = "../../../Syphon-Framework/Syphon.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		1BB127A6135532BB0079EA84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
 		1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
@@ -232,7 +232,7 @@
 				41B03CC813CD8D9200CE4F36 /* SyphonNameboundClient.m */,
 			);
 			name = Shared;
-			path = ../../Shared;
+			path = ../../../Shared;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -283,6 +283,7 @@
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "JSyphon" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -327,7 +328,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\ninstall_name_tool -change \"@loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon\" \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\" \n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.jnilib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\nrm -r \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\ncp -a \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\" \"$SOURCE_ROOT/../native_libs/\"\ncp -a \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"";
+			shellScript = "#!/bin/bash\n\ninstall_name_tool -change \"@loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon\" \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\" \n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.jnilib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\nrm -rf \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\ncp -a \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\" \"$SOURCE_ROOT/../native_libs/\"\ncp -a \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -375,10 +376,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = jnilib;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../../Syphon Framework/build/$(CONFIGURATION)/\"/**",
+					"\"$(SRCROOT)/../../../Syphon-Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
-					"\"$(SRCROOT)/../../../Syphon Framework/build/Release\"",
+					"\"$(SRCROOT)/../../../Syphon-Framework/build/Release\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
@@ -406,10 +407,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = jnilib;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../../Syphon Framework/build/$(CONFIGURATION)/\"/**",
+					"\"$(SRCROOT)/../../../Syphon-Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
 					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
-					"\"$(SRCROOT)/../../../Syphon Framework/build/Release\"",
+					"\"$(SRCROOT)/../../../Syphon-Framework/build/Release\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -433,7 +434,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				VALID_ARCHS = "i386 x86_64";
 			};

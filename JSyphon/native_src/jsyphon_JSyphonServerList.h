@@ -10,7 +10,7 @@ extern "C" {
 /*
  * Class:     jsyphon_JSyphonServerList
  * Method:    getList
- * Signature: ()Ljava/lang/Object;
+ * Signature: ()Ljava/util/ArrayList;
  */
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonServerList_getList
   (JNIEnv *, jclass);

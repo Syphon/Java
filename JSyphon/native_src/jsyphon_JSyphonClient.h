@@ -42,7 +42,7 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    serverDescription
- * Signature: ()Ljava/util/Dictionary;
+ * Signature: ()Ljava/util/HashMap;
  */
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription
   (JNIEnv *, jobject);
@@ -58,7 +58,7 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    newFrameDataForContext
- * Signature: ()Ljava/util/Dictionary;
+ * Signature: ()Ljava/util/HashMap;
  */
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext
   (JNIEnv *, jobject);
