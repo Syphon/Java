@@ -22,7 +22,7 @@ The Test package for JSyphon relies on LWJGL, so if you want to use our test cla
 Getting Started:
 ====
 
-* Make sure that you have also cloned the <a href="https://github.com/Syphon/Syphon-Framework">Syphon-Framework</a> and <a href="https://github.com/Syphon/Shared">Shared</a> repos, and that they are located inside the same folder as Java
+* After cloning the repository, use ```git submodule update --init``` to pull in the <a href="https://github.com/Syphon/Syphon-Framework">Syphon-Framework</a> and <a href="https://github.com/Syphon/Shared">Shared</a> repos
 
 * Build jsyphon.jar, by running the build script inside the ant folder. The resulting jar file will be placed inside the jar folder.
 
