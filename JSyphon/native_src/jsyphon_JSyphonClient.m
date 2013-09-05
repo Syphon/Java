@@ -15,31 +15,26 @@ static SyphonNameboundClient* mClient;
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_init(JNIEnv * env, jobject jobj)
 {
     JNF_COCOA_ENTER(env);
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 
     mClient = [[SyphonNameboundClient alloc] init]; 
 
-    [pool drain];
     JNF_COCOA_EXIT(env);
 }
 
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setApplicationName(JNIEnv * env, jobject jobj, jstring appName)
 {
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
     
     NSString* name = JNFJavaToNSString(env, appName);
 		        
 	[(SyphonNameboundClient*)mClient setAppName:name];
-		
-    [pool drain];
+    
     JNF_COCOA_EXIT(env);    
 }
 
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setServerName(JNIEnv * env, jobject jobj, jstring serverName)
 {
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
         
     NSString* name = JNFJavaToNSString(env, serverName);
 		
@@ -47,9 +42,7 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setServerName(JNIEnv * env, jo
         name = nil;
         
 	[(SyphonNameboundClient*)mClient setName:name];
-		
-	
-    [pool drain];
+    
     JNF_COCOA_EXIT(env);      
 }
 
@@ -57,8 +50,7 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid(JNIEnv * env, jobj
 {
     jboolean val = JNI_FALSE;
     
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
     
 	[(SyphonNameboundClient*)mClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)mClient client];
@@ -68,7 +60,6 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid(JNIEnv * env, jobj
     
 	[(SyphonNameboundClient*)mClient unlockClient];	
     
-    [pool drain];
     JNF_COCOA_EXIT(env);
     
     return val;
@@ -78,8 +69,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
 {
     jobject serverdesc = nil;
     
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
 
 	[(SyphonNameboundClient*)mClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)mClient client];	
@@ -93,7 +83,6 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
     
 	[(SyphonNameboundClient*)mClient unlockClient];		
 	
-    [pool drain];
     JNF_COCOA_EXIT(env);
 
     return serverdesc;
@@ -104,8 +93,7 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame(JNIEnv * env, 
 {
     jboolean val = JNI_FALSE;
     
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
     
 	[(SyphonNameboundClient*)mClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)mClient client];
@@ -115,7 +103,6 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame(JNIEnv * env, 
     
 	[(SyphonNameboundClient*)mClient unlockClient];
 	
-    [pool drain];
     JNF_COCOA_EXIT(env);
     
     return val;    
@@ -127,8 +114,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext(JNI
 {
 	jobject frameimg = nil;
 	
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
-	JNF_COCOA_ENTER(env);	
+	JNF_COCOA_ENTER(env);
 		
 	[(SyphonNameboundClient*)mClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)mClient client];
@@ -150,7 +136,6 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameImageForContext(JNI
 	[(SyphonNameboundClient*)mClient unlockClient];
 	
 	JNF_COCOA_EXIT(env);
-	[pool drain];	
 	
 	return frameimg;	
 }
@@ -160,8 +145,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
 {
 	jobject imgdata = nil;
 	
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
-	JNF_COCOA_ENTER(env);	
+	JNF_COCOA_ENTER(env);
 	
 	[(SyphonNameboundClient*)mClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)mClient client];
@@ -193,14 +177,12 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
 	[(SyphonNameboundClient*)mClient unlockClient];	
 	
 	JNF_COCOA_EXIT(env);
-	[pool drain];		
 	
 	return imgdata;	
 }
 
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_stop(JNIEnv * env, jobject jobj)
 {
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
     JNF_COCOA_ENTER(env);
   
     [(SyphonNameboundClient*)mClient lockClient];
@@ -211,7 +193,6 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_stop(JNIEnv * env, jobject job
 	[(SyphonNameboundClient*)mClient unlockClient];	
 
     JNF_COCOA_EXIT(env);
-    [pool drain];
 }
 
 /*
@@ -220,7 +201,6 @@ static SyphonClient* _myClient;
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_initWithServerDescriptionAndOptions(JNIEnv * env, jobject jobj, jobject jdesc, jobject jopts)
 {
     JNF_COCOA_ENTER(env);
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	
     JNFTypeCoercer* coecer = [JNFDefaultCoercions defaultCoercer];
     [JNFDefaultCoercions addMapCoercionTo:coecer];
@@ -228,8 +208,7 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_initWithServerDescriptionAndOp
     NSDictionary* desc = [coecer coerceJavaObject:jdesc withEnv:env];
     
     _myClient = [[SyphonClient alloc] initWithServerDescription:desc options:nil newFrameHandler:NULL];
-    
-    [pool drain];
+ 
     JNF_COCOA_EXIT(env);
 }
 
@@ -237,13 +216,11 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid(JNIEnv * env, jobj
 {
     jboolean val = JNI_FALSE;
     
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
     
     if([_myClient isValid])
         val = JNI_TRUE;
-    
-    [pool drain];
+ 
     JNF_COCOA_EXIT(env);
     
     return val;
@@ -253,8 +230,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
 {
     jobject serverdesc = NULL;
     
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
 	
     NSDictionary* desc = [_myClient serverDescription];
     
@@ -262,8 +238,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
     [JNFDefaultCoercions addMapCoercionTo:coecer];
     
     serverdesc = [coecer coerceNSObject:desc withEnv:env];
-    
-    [pool drain];
+ 
     JNF_COCOA_EXIT(env);
 	
     return serverdesc;
@@ -273,13 +248,11 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame(JNIEnv * env, 
 {
     jboolean val = JNI_FALSE;
  
-    JNF_COCOA_ENTER(env);    
-	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
  
     if([_myClient hasNewFrame])
 	val = JNI_TRUE;
  
-    [pool drain];
     JNF_COCOA_EXIT(env);
  
     return val;    
@@ -287,12 +260,10 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame(JNIEnv * env, 
 
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_stop(JNIEnv * env, jobject jobj)
 {
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	JNF_COCOA_ENTER(env);	
 	
 	[_myClient stop];
 	
 	JNF_COCOA_EXIT(env);
-	[pool drain];    
 }
 */

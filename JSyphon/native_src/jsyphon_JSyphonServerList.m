@@ -12,8 +12,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonServerList_getList(JNIEnv * env, j
 {
     jobject serverlist = nil;
 	
-    JNF_COCOA_ENTER(env);    
-    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    JNF_COCOA_ENTER(env);
 	
 	NSArray *servers = [[SyphonServerDirectory sharedDirectory] servers];
 	NSMutableArray *output = [NSMutableArray arrayWithCapacity:[servers count]];
@@ -30,7 +29,6 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonServerList_getList(JNIEnv * env, j
 	
     serverlist = [coecer coerceNSObject:servers withEnv:env];	
 	
-	[pool drain];
     JNF_COCOA_EXIT(env);
 	
     return serverlist;
