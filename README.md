@@ -30,8 +30,6 @@ Getting Started:
 
 * Compile the XCode Project to build the native JSyphon JNI libray, named "libJSyphon.jnilib". Build "libJSyphon.jnilib", which includes the Syphon framework, and the JNI code to run in your java app. The compiled "libJSyphon.jnilib" is copied into the "native_libs" folder, where you can then load it in Java using System.load or System.loadLibrary depending on your path setups. We suggest System.loadLibrary.
 
-* In order to build versions of libJSyphon and Syphon that are compatible with OSX 10.6, when using XCode 4.4 or higher, you would need to install the MacOSX 10.6 SDK separately. This stackoverflow thread might be useful: http://stackoverflow.com/questions/11989007/where-to-get-sdk-10-6-for-xcode
-
 * To experiment with the JSyphon examples, we provide an Eclipse project which you can import into your workspace, and experiment with "ServerTest.java" and "ClientTest.java". 
 
 Acknowledgments
