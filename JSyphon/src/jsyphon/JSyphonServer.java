@@ -39,7 +39,7 @@ public class JSyphonServer {
     System.loadLibrary("JSyphon");    
   }
   
-  // public API
+  // Public API
   
 	public JSyphonServer() { }
 	

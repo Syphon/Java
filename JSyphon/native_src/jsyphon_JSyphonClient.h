@@ -10,66 +10,66 @@ extern "C" {
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    init
- * Signature: ()V
+ * Signature: (Ljava/util/HashMap;)J
  */
-JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_init
-  (JNIEnv *, jobject);
+JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonClient_init
+  (JNIEnv *, jobject, jobject);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    setApplicationName
- * Signature: (Ljava/lang/String;)V
+ * Signature: (JLjava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setApplicationName
-  (JNIEnv *, jobject, jstring);
+  (JNIEnv *, jobject, jlong, jstring);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    setServerName
- * Signature: (Ljava/lang/String;)V
+ * Signature: (JLjava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setServerName
-  (JNIEnv *, jobject, jstring);
+  (JNIEnv *, jobject, jlong, jstring);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    isValid
- * Signature: ()Z
+ * Signature: (J)Z
  */
 JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    serverDescription
- * Signature: ()Ljava/util/HashMap;
+ * Signature: (J)Ljava/util/HashMap;
  */
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    hasNewFrame
- * Signature: ()Z
+ * Signature: (J)Z
  */
 JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    newFrameDataForContext
- * Signature: ()Ljava/util/HashMap;
+ * Signature: (J)Ljava/util/HashMap;
  */
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonClient
  * Method:    stop
- * Signature: ()V
+ * Signature: (J)V
  */
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_stop
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus
 }
