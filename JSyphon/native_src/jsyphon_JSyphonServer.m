@@ -8,10 +8,10 @@
 
 #import <OpenGL/CGLMacro.h>
 
-SyphonServer* _myServer;
-
 JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonServer_initWithName (JNIEnv * env, jobject jobj, jstring name, jobject options)
 {
+    jlong ptr = 0;
+    
 	JNF_COCOA_ENTER(env);
     
     CGLContextObj cgl_ctx = CGLGetCurrentContext();
@@ -25,11 +25,12 @@ JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonServer_initWithName (JNIEnv * env, j
         sopt = [coecer coerceJavaObject:options withEnv:env];
     }
     
-	_myServer = [[SyphonServer alloc] initWithName:sname context:cgl_ctx options:nil];
+	SyphonServer* server = [[SyphonServer alloc] initWithName:sname context:cgl_ctx options:nil];
+    ptr = ptr_to_jlong(server);
     
 	JNF_COCOA_EXIT(env);
 
-	return _myServer;
+	return ptr;
 }
 
 JNIEXPORT jstring JNICALL Java_jsyphon_JSyphonServer_getName (JNIEnv * env, jobject jobj, jlong ptr)
