@@ -1,4 +1,6 @@
 package jsyphon;
+import java.util.HashMap;
+
 import jsyphon.util.NSRect;
 import jsyphon.util.NSSize;
 
@@ -30,39 +32,74 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-public class JSyphonServer
-{
+public class JSyphonServer {
+  private long ptr;
+
+  static {
+    System.loadLibrary("JSyphon");    
+  }
+  
+  // public API
+  
 	public JSyphonServer() { }
-
-	static
-	{
-		System.loadLibrary("JSyphon");		
-	}
 	
-	//Native method declarations
+  public void initWithName(String name) {
+    ptr = initWithName(name, null);
+  }
+
+  public String getName() {
+    return getName(ptr);
+  }
+
+  public boolean hasClients() {
+    return hasClients(ptr);
+  }
+
+  public void publishFrameTexture(int texID, int texTarget, int posX, int posY, int width, int height, int sizeX, int sizeY, boolean isFlipped) {
+    publishFrameTexture(ptr, texID, texTarget, posX, posY, width, height, sizeX, sizeY, isFlipped);
+  }
+
+  public void publishFrameTexture(int texID, int texTarget, NSRect rect, NSSize size, boolean isFlipped) {
+    publishFrameTexture(ptr, texID, texTarget, rect.getOrigin().getX(), rect.getOrigin().getY(), rect.getSize().getX(), rect.getSize().getY(), size.getX(), size.getY(), isFlipped);
+  }
+
+  public boolean bindToDrawFrameOfSize(NSSize size) {
+    return bindToDrawFrameOfSize(ptr, size.getX(), size.getY());
+  }
+
+  public boolean bindToDrawFrameOfSize(int sizeX, int sizeY) {
+    return bindToDrawFrameOfSize(ptr, sizeX, sizeY);
+  }
+
+  public void unbindAndPublish() {
+    unbindAndPublish(ptr);
+  }
+
+  public void stop() {
+    stop(ptr);
+  }
 	
-	// TODO: move this to the constuctor?
-	public native void initWithName(String name);
+	// Native method declarations
+	
+	private native long initWithName(String name, HashMap<String, Object> options);
 
-	public native String getName();
+	private native String getName(long ptr);
 
-	public native boolean hasClients();
+	private native boolean hasClients(long ptr);
 
-	public native void publishFrameTexture(int texID, int texTarget, int posX, int posY, int width, int height, int sizeX, int sizeY, boolean isFlipped);
+	private native void publishFrameTexture(long ptr, int texID, int texTarget, int posX, int posY, int width, int height, int sizeX, int sizeY, boolean isFlipped);
 
-	public void publishFrameTexture(int texID, int texTarget, NSRect rect, NSSize size, boolean isFlipped)
-	{
-		publishFrameTexture(texID, texTarget, rect.getOrigin().getX(), rect.getOrigin().getY(), rect.getSize().getX(), rect.getSize().getY(), size.getX(), size.getY(), isFlipped);
+	private void publishFrameTexture(long ptr, int texID, int texTarget, NSRect rect, NSSize size, boolean isFlipped) {
+		publishFrameTexture(ptr, texID, texTarget, rect.getOrigin().getX(), rect.getOrigin().getY(), rect.getSize().getX(), rect.getSize().getY(), size.getX(), size.getY(), isFlipped);
 	}
 
-	public boolean bindToDrawFrameOfSize(NSSize size)
-	{
-		return bindToDrawFrameOfSize(size.getX(), size.getY());
+	private boolean bindToDrawFrameOfSize(long ptr, NSSize size) {
+		return bindToDrawFrameOfSize(ptr, size.getX(), size.getY());
 	}
 
-	public native boolean bindToDrawFrameOfSize(int sizeX, int sizeY);
+	private native boolean bindToDrawFrameOfSize(long ptr, int sizeX, int sizeY);
 
-	public native void unbindAndPublish();
+	private native void unbindAndPublish(long ptr);
 
-	public native void stop();
+	private native void stop(long ptr);
 }

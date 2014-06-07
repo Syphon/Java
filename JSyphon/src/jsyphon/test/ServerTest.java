@@ -24,7 +24,7 @@ public class ServerTest {
 	 * 
 	 */
 	public ServerTest() throws LWJGLException {
-		server=new JSyphonServer();
+		server = new JSyphonServer();
 	}
 
 	public void start() {

@@ -10,58 +10,58 @@ extern "C" {
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    initWithName
- * Signature: (Ljava/lang/String;)V
+ * Signature: (Ljava/lang/String;Ljava/util/HashMap;)J
  */
-JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_initWithName
-  (JNIEnv *, jobject, jstring);
+JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonServer_initWithName
+  (JNIEnv *, jobject, jstring, jobject);
 
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    getName
- * Signature: ()Ljava/lang/String;
+ * Signature: (J)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_jsyphon_JSyphonServer_getName
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    hasClients
- * Signature: ()Z
+ * Signature: (J)Z
  */
 JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonServer_hasClients
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    publishFrameTexture
- * Signature: (IIIIIIIIZ)V
+ * Signature: (JIIIIIIIIZ)V
  */
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_publishFrameTexture
-  (JNIEnv *, jobject, jint, jint, jint, jint, jint, jint, jint, jint, jboolean);
+  (JNIEnv *, jobject, jlong, jint, jint, jint, jint, jint, jint, jint, jint, jboolean);
 
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    bindToDrawFrameOfSize
- * Signature: (II)Z
+ * Signature: (JII)Z
  */
 JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonServer_bindToDrawFrameOfSize
-  (JNIEnv *, jobject, jint, jint);
+  (JNIEnv *, jobject, jlong, jint, jint);
 
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    unbindAndPublish
- * Signature: ()V
+ * Signature: (J)V
  */
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_unbindAndPublish
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 /*
  * Class:     jsyphon_JSyphonServer
  * Method:    stop
- * Signature: ()V
+ * Signature: (J)V
  */
 JNIEXPORT void JNICALL Java_jsyphon_JSyphonServer_stop
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus
 }
