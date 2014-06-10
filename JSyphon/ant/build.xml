@@ -5,6 +5,7 @@
 		to include in other Java applications or packages.
 -->
 	
+	<property name="project.target" value="1.6"/>	
 	<property name="project.name" value="jsyphon"/>	
 	<property name="project.jar.name" value="${project.name}.jar"/>
 	<property name="project.src" location="src"/>
@@ -20,7 +21,7 @@
 	</target>
 	
 	<target name="compile">
-	  <javac srcdir="${project.src}" destdir="${project.bin}" source="1.6" target="1.6" includeantruntime="false">
+	  <javac srcdir="${project.src}" destdir="${project.bin}" source="${project.target}" target="${project.target}" includeantruntime="false">
 	  	<include name="jsyphon/*.java" />
 	  	<include name="jsyphon/util/*.java" />	  	
 	  </javac>	
@@ -30,7 +31,7 @@
 	  <jar jarfile="${project.dist}/${project.jar.name}" basedir="${project.bin}"/>
 	</target>
 	
-	<target name="clean">
+	<target name="dist">
 	  <echo>Creating jsyphon jar...
 	  </echo>
 	  <antcall target="init" />
