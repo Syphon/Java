@@ -24,7 +24,7 @@ Getting Started:
 
 * After cloning the repository, use ```git submodule update --init``` to pull in the <a href="https://github.com/Syphon/Syphon-Framework">Syphon-Framework</a> and <a href="https://github.com/Syphon/Shared">Shared</a> repos
 
-* Build jsyphon.jar, by running the build script inside the ant folder. The resulting jar file will be placed inside the jar folder.
+* Build jsyphon.jar, by running ```ant dist``` inside the ant folder. The resulting jar file will be placed inside the jar folder.
 
 * Generate the headers by running the script native_src/gen_headers.sh
 
