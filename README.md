@@ -1,23 +1,8 @@
 Java
 ====
 
-JSyphon - a Java Native Interface for Syphon
+JSyphon - a Java Native Interface for Syphon. It has been tested with JOGL via Processing, and LWJGL.
 
-Setup
-====
-
-Currently JSyphon has been tested with JOGL via Processing, and LWJGL.
-
-The Test package for JSyphon relies on LWJGL, so if you want to use our test class, be sure to download the LWJGL binaries and place the uncompressed folders inside lib directory, so you have something like:
-
-* Readme.txt
-* ant
-* bin
-* jar
-* lib/lwjgl
-* native_libs
-* native_src
-* src
 
 Getting Started:
 ====
