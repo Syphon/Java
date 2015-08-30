@@ -1,2 +1,3 @@
-/bin
-/native_src/.DS_Store
+bin
+native_src/.DS_Store
+native_src/JSyphon.xcodeproj/project.xcworkspace/xcshareddata/
