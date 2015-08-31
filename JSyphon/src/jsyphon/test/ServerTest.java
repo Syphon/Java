@@ -10,6 +10,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL31;
 
 /**
  * @author Skye Book
@@ -51,11 +52,12 @@ public class ServerTest {
       
       GL11.glPointSize(40f);
       GL11.glBegin(GL11.GL_POINTS);
+      GL11.glColor4f(1.0f, 0.0f, 0.0f, 1.0f);
       GL11.glVertex3f(0.0f, 0.0f, 0.0f);
       GL11.glEnd();
 
       // Its highly recommended you use RECTANGLE textures
-      int target = GL11.GL_TEXTURE_2D; // GL31.GL_TEXTURE_RECTANGLE or GL11.GL_TEXTURE_2D
+      int target = GL31.GL_TEXTURE_RECTANGLE; // GL31.GL_TEXTURE_RECTANGLE or GL11.GL_TEXTURE_2D
       
       GL11.glEnable(target);
 
