@@ -57,14 +57,19 @@ public class ServerTest {
       GL11.glEnd();
 
       // Its highly recommended you use RECTANGLE textures
-      int target = GL31.GL_TEXTURE_RECTANGLE; // GL31.GL_TEXTURE_RECTANGLE or GL11.GL_TEXTURE_2D
+      int target = GL11.GL_TEXTURE_2D; // GL31.GL_TEXTURE_RECTANGLE or GL11.GL_TEXTURE_2D
       
       GL11.glEnable(target);
 
       GL11.glGenTextures(intBuff);
-
+      
       GL11.glBindTexture(target, intBuff.get(0));
-
+      // Need to set the texture parameters
+      GL11.glTexParameteri(target, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
+      GL11.glTexParameteri(target, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
+      GL11.glTexParameteri(target, GL11.GL_TEXTURE_WRAP_S, GL11.GL_CLAMP);
+      GL11.glTexParameteri(target, GL11.GL_TEXTURE_WRAP_T, GL11.GL_CLAMP);
+      
       GL11.glTexImage2D(target, 0, GL11.GL_RGBA8, 800, 600, 0, GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, dummy);
 
       GL11.glCopyTexSubImage2D(target, 0, 0, 0, 0, 0, 800, 600);
