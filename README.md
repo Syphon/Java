@@ -22,11 +22,29 @@ git add Shared
 git commit java -m "Updated Syphon submodules"
 ```
 
-* Build jsyphon.jar, by running ```ant dist``` inside the ant folder. The resulting jar file will be placed inside the jar folder.
+* Change into the JSyphon subfolder: 
 
-* Generate the headers by running the script native_src/gen_headers.sh
+```cd JSyphon```
 
-* Compile the XCode project located inside JSyphon/native_src in order to build the native JSyphon JNI libray, named "libJSyphon.jnilib", which includes the Syphon framework, and the JNI code to run in your java app. The compiled "libJSyphon.jnilib" is copied into the "native_libs" folder, where you can then load it in Java using System.load or System.loadLibrary depending on your path setups. We suggest System.loadLibrary.
+* Build jsyphon.jar, by running ```ant dist``` inside the ant folder:
+
+```bash
+cd ant
+ant dist
+cd ..
+```
+
+The resulting jsyphon.jar file will be placed inside the jar folder.
+
+* Generate the headers changing into the native_src folder and running the script gen_headers.sh script:
+
+```bash
+cd native_src
+./gen_headers.sh
+cd ..
+```
+
+* Open the JSyphon XCode project inside native_src, and build it. This will generate two files: the Syphon framework binary, named simply "Syphon", and the JSyphon JNI library, named "libJSyphon.jnilib". They will be placed inside the "native_libs" folder, where you can then load it in Java using System.load or System.loadLibrary depending on your path setups. We suggest System.loadLibrary.
 
 * To experiment with the JSyphon examples, we provide an Eclipse project which you can import into your workspace, and experiment with "ServerTest.java" and "ClientTest.java". 
 
