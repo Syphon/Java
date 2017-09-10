@@ -17,7 +17,10 @@ JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonClient_init(JNIEnv * env, jobject jo
     
     JNF_COCOA_ENTER(env);
 
-    SyphonNameboundClient* client = [[SyphonNameboundClient alloc] init];
+//    SyphonNameboundClient* client = [[SyphonNameboundClient alloc] init];
+    CGLContextObj cgl_ctx = CGLGetCurrentContext();
+    SyphonNameboundClient* client = [[SyphonNameboundClient alloc] initWithContext:cgl_ctx];
+    
     ptr = ptr_to_jlong(client);
 
     JNF_COCOA_EXIT(env);
@@ -128,15 +131,15 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
 	[(SyphonNameboundClient*)boundClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
 	
-	SyphonImage* img = [client newFrameImageForContext:CGLGetCurrentContext()];	
-		
+    SyphonImage* img = [client newFrameImage];    
+    
 	NSSize texSize = [img textureSize];
 
 	NSNumber *name = [NSNumber numberWithInt:[img textureName]];
 	NSNumber *width = [NSNumber numberWithFloat:texSize.width];
 	NSNumber *height = [NSNumber numberWithFloat:texSize.height];
 	
-    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys: 
+    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
 						 name, @"name", 
 						 width, @"width", 
 						 height, @"height", 
