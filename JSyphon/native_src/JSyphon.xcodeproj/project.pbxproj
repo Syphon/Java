@@ -20,7 +20,6 @@
 		41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */; };
 		41B03CCC13CD8D9200CE4F36 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B03CC813CD8D9200CE4F36 /* SyphonNameboundClient.m */; };
 		E2DDA92317D8DDD700C03F2F /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DDA92017D8DDBD00C03F2F /* Syphon.framework */; };
-		E2DDA92417D8DDDD00C03F2F /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2DDA92017D8DDBD00C03F2F /* Syphon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,19 +38,6 @@
 			remoteInfo = Syphon;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		1BB12971135611AF0079EA84 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				E2DDA92417D8DDDD00C03F2F /* Syphon.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -253,7 +239,6 @@
 				1BB12922135611160079EA84 /* Headers */,
 				1BB12923135611160079EA84 /* Sources */,
 				1BB12924135611160079EA84 /* Frameworks */,
-				1BB12971135611AF0079EA84 /* CopyFiles */,
 				1BB12970135611910079EA84 /* ShellScript */,
 			);
 			buildRules = (
@@ -272,7 +257,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0830;
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "JSyphon" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -320,8 +305,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\n#install_name_tool -change \"@loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon\" \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\ninstall_name_tool -change \"@loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon\" \"@loader_path/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.jnilib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\nrm -rf \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\ncp -a \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\" \"$SOURCE_ROOT/../native_libs/\"\n#cp -a \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"\ncp -a \"$BUILT_PRODUCTS_DIR/Syphon.framework/Versions/A/Syphon\" \"$SOURCE_ROOT/../native_libs/\"";
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\n\n#install_name_tool -change \"@loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon\" \"@loader_path/Syphon.framework/Versions/A/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\nif ! install_name_tool -change \"@loader_path/../Frameworks/Syphon.framework/Versions/A/Syphon\" \"@loader_path/Syphon\" \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"; then\n    exit 1\nfi\n\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.jnilib\"\n\necho \"$BUILT_PRODUCTS_DIR/Syphon.framework\"\necho \"$SOURCE_ROOT/../native_libs/Syphon.framework\"\n\nif ! rm -rf \"$SOURCE_ROOT/../native_libs/Syphon.framework\"; then\n    exit 1\nfi\n\nif ! cp -a \"$BUILT_PRODUCTS_DIR/libJSyphon.jnilib\" \"$SOURCE_ROOT/../native_libs/\"; then\n    exit 1\nfi\n\n#cp -a \"$BUILT_PRODUCTS_DIR/Syphon.framework\" \"$SOURCE_ROOT/../native_libs/\"\nif ! cp -a \"$BUILT_PRODUCTS_DIR/Syphon.framework/Versions/A/Syphon\" \"$SOURCE_ROOT/../native_libs/\"; then\n    exit 1\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -422,9 +407,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -437,8 +439,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
