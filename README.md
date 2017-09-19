@@ -54,8 +54,7 @@ xcodebuild -scheme libJSyphon build -project native_src/JSyphon.xcodeproj
 
 and this other one for archiving:
 
-```
-bash
+```bash
 xcodebuild -scheme libJSyphon archive -project native_src/JSyphon.xcodeproj
 ```
 
