@@ -1,0 +1,1 @@
+xcodebuild -scheme libJSyphon archive -project JSyphon.xcodeproj
