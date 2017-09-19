@@ -19,7 +19,7 @@ git pull origin master
 cd ..
 git add Syphon-Framework
 git add Shared
-git commit java -m "Updated Syphon submodules"
+git commit -m "Updated Syphon submodules"
 ```
 
 * Change into the JSyphon subfolder: 
