@@ -44,10 +44,19 @@ cd native_src
 cd ..
 ```
 
-* Open the JSyphon XCode project inside native_src, and build it. You can also build the project from the command line (it requires the Command Line Tools Package, see [here](https://developer.apple.com/library/content/technotes/tn2339/_index.html) for more info) with the following line:
+* Open the JSyphon XCode project inside native_src, and build it. This will generate a debug version of the library, which will print several messages at runtime. You need to archive it to create a release version without debug mesages. 
+
+You can also build/archive the project from the command line (it requires the Command Line Tools Package, see [here](https://developer.apple.com/library/content/technotes/tn2339/_index.html) for more info) with the following line for building:
 
 ```bash
 xcodebuild -scheme libJSyphon build -project native_src/JSyphon.xcodeproj
+```
+
+and this other one for archiving:
+
+```
+bash
+xcodebuild -scheme libJSyphon archive -project native_src/JSyphon.xcodeproj
 ```
 
 The build step (either from the IDE or the command line) will generate two files: the Syphon framework binary, named simply "Syphon", and the JSyphon JNI library, named "libJSyphon.jnilib". They will be placed inside the "native_libs" folder, where you can then load it in Java using System.load or System.loadLibrary depending on your path setups. We suggest System.loadLibrary.
