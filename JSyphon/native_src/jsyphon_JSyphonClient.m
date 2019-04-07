@@ -18,9 +18,12 @@ JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonClient_init(JNIEnv * env, jobject jo
     JNF_COCOA_ENTER(env);
 
     CGLContextObj cgl_ctx = CGLGetCurrentContext();
-    SyphonNameboundClient* client = [[SyphonNameboundClient alloc] initWithContext:cgl_ctx];
-    
-    ptr = ptr_to_jlong(client);
+    if (cgl_ctx)
+    {
+        SyphonNameboundClient* client = [[SyphonNameboundClient alloc] initWithContext:cgl_ctx];
+
+        ptr = ptr_to_jlong(client);
+    }
 
     JNF_COCOA_EXIT(env);
     
