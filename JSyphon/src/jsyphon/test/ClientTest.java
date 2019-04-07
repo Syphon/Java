@@ -23,7 +23,6 @@ public class ClientTest {
    */
   public ClientTest() throws LWJGLException {
     client = new JSyphonClient();
-    client.init();
   }
 
   public void start() {
@@ -35,7 +34,7 @@ public class ClientTest {
       e.printStackTrace();
       System.exit(0);
     }
-
+    client.init();
     client.setApplicationName("Simple Server");
 
     while (!Display.isCloseRequested()) {
