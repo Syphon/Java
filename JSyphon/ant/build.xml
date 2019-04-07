@@ -5,7 +5,7 @@
 		to include in other Java applications or packages.
 -->
 	
-	<property name="project.target" value="1.6"/>	
+	<property name="project.target" value="1.8"/>
 	<property name="project.name" value="jsyphon"/>	
 	<property name="project.jar.name" value="${project.name}.jar"/>
 	<property name="project.src" location="src"/>
