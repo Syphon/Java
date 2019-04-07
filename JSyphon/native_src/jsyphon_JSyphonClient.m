@@ -17,7 +17,6 @@ JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonClient_init(JNIEnv * env, jobject jo
     
     JNF_COCOA_ENTER(env);
 
-//    SyphonNameboundClient* client = [[SyphonNameboundClient alloc] init];
     CGLContextObj cgl_ctx = CGLGetCurrentContext();
     SyphonNameboundClient* client = [[SyphonNameboundClient alloc] initWithContext:cgl_ctx];
     
@@ -35,7 +34,7 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setApplicationName(JNIEnv * en
     NSString* name = JNFJavaToNSString(env, appName);
 		  
     SyphonNameboundClient* client = jlong_to_ptr(ptr);
-    [(SyphonNameboundClient*)client setAppName:name];
+    [client setAppName:name];
     
     JNF_COCOA_EXIT(env);    
 }
@@ -50,7 +49,7 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_setServerName(JNIEnv * env, jo
         name = nil;
     
     SyphonNameboundClient* client = jlong_to_ptr(ptr);
-	[(SyphonNameboundClient*)client setName:name];
+	[client setName:name];
     
     JNF_COCOA_EXIT(env);      
 }
@@ -63,13 +62,13 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid(JNIEnv * env, jobj
     
     
     SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
-	[(SyphonNameboundClient*)boundClient lockClient];
-	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
+	[boundClient lockClient];
+	SyphonClient *client = [boundClient client];
 	
     if([client isValid])
         val = JNI_TRUE;
     
-	[(SyphonNameboundClient*)boundClient unlockClient];
+	[boundClient unlockClient];
     
     JNF_COCOA_EXIT(env);
     
@@ -83,7 +82,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
     JNF_COCOA_ENTER(env);
 
     SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
-	[(SyphonNameboundClient*)boundClient lockClient];
+	[boundClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
 	
     NSDictionary* desc = [client serverDescription];
@@ -93,7 +92,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
     
     serverdesc = [coecer coerceNSObject:desc withEnv:env];
     
-	[(SyphonNameboundClient*)boundClient unlockClient];
+	[boundClient unlockClient];
 	
     JNF_COCOA_EXIT(env);
 
@@ -108,13 +107,13 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_hasNewFrame(JNIEnv * env, 
     JNF_COCOA_ENTER(env);
     
     SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
-	[(SyphonNameboundClient*)boundClient lockClient];
+	[boundClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
 	
     if([client hasNewFrame])
         val = JNI_TRUE;
     
-	[(SyphonNameboundClient*)boundClient unlockClient];
+	[boundClient unlockClient];
 	
     JNF_COCOA_EXIT(env);
     
@@ -128,7 +127,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
 	JNF_COCOA_ENTER(env);
 	
     SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
-	[(SyphonNameboundClient*)boundClient lockClient];
+	[boundClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
 	
     SyphonImage* img = [client newFrameImage];    
@@ -151,9 +150,9 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
     
     imgdata = [coecer coerceNSObject:dic withEnv:env];
 	
-	[(SyphonImage*)img release];
+	[img release];
 	
-	[(SyphonNameboundClient*)boundClient unlockClient];
+	[boundClient unlockClient];
 	
 	JNF_COCOA_EXIT(env);
 	
@@ -165,12 +164,12 @@ JNIEXPORT void JNICALL Java_jsyphon_JSyphonClient_stop(JNIEnv * env, jobject job
     JNF_COCOA_ENTER(env);
   
     SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
-    [(SyphonNameboundClient*)boundClient lockClient];
+    [boundClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
 	
     [client stop];
     
-	[(SyphonNameboundClient*)boundClient unlockClient];
+	[boundClient unlockClient];
 
     JNF_COCOA_EXIT(env);
 }
