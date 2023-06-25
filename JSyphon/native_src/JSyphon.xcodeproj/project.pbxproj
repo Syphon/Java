@@ -370,7 +370,7 @@
 						"$(SRCROOT)/../jdk/src/java.desktop/macosx/native/libosxapp",
 						"$(SRCROOT)/../jdk/src/java.base/share/native/libjava",
 						"$(SRCROOT)/../jdk/src/java.base/unix/native/libjava",
-				;
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -406,7 +406,7 @@
 						"$(SRCROOT)/../jdk/src/java.desktop/macosx/native/libosxapp",
 						"$(SRCROOT)/../jdk/src/java.base/share/native/libjava",
 						"$(SRCROOT)/../jdk/src/java.base/unix/native/libjava",
-				;
+				);
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-framework",
