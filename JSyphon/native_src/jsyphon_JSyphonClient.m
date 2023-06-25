@@ -1,14 +1,5 @@
-#import <JavaVM/JavaVM.h>
-#import <JavaNativeFoundation/JavaNativeFoundation.h>	// JNI Cocoa helper 
-#import <JavaVM/jni.h>
-
-#import <Cocoa/Cocoa.h>
-#import <OpenGL/OpenGL.h>
-#import <Syphon/Syphon.h>
-
+#import "jsyphon_imports.h"
 #import <SyphonNameboundClient.h>
-
-#import <OpenGL/CGLMacro.h>
 
 // pass options in case they are needed in the future...
 JNIEXPORT jlong JNICALL Java_jsyphon_JSyphonClient_init(JNIEnv * env, jobject jobj, jobject options)
@@ -81,7 +72,26 @@ JNIEXPORT jboolean JNICALL Java_jsyphon_JSyphonClient_isValid(JNIEnv * env, jobj
 JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * env, jobject jobj, jlong ptr)
 {
     jobject serverdesc = nil;
-    
+    // This methods returns a ArrayList<String>:
+    // (realm kdc* null) null (mapping-domain mapping-realm)*
+    jclass jc_arrayListClass = (*env)->FindClass(env, "java/util/ArrayList");
+    CHECK_NULL_RETURN(jc_arrayListClass, NULL);
+    jmethodID jm_arrayListCons = (*env)->GetMethodID(env, jc_arrayListClass, "<init>", "()V");
+    CHECK_NULL_RETURN(jm_arrayListCons, NULL);
+    jmethodID jm_listAdd = (*env)->GetMethodID(env, jc_arrayListClass, "add", "(Ljava/lang/Object;)Z");
+    CHECK_NULL_RETURN(jm_listAdd, NULL);
+    serverdesc = (*env)->NewObject(env, jc_arrayListClass, jm_arrayListCons);
+    CHECK_NULL_RETURN(serverdesc, NULL);
+
+    SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
+    [boundClient lockClient];
+    SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
+    ADD(serverdesc, client);
+    ADDNULL(serverdesc);
+    [boundClient unlockClient];
+    return serverdesc;
+
+    /*
     JNF_COCOA_ENTER(env);
 
     SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
@@ -100,6 +110,7 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_serverDescription(JNIEnv * 
     JNF_COCOA_EXIT(env);
 
     return serverdesc;
+    */
 }
 
 
@@ -127,37 +138,47 @@ JNIEXPORT jobject JNICALL Java_jsyphon_JSyphonClient_newFrameDataForContext(JNIE
 {
 	jobject imgdata = nil;
 	
-	JNF_COCOA_ENTER(env);
+	//JNF_COCOA_ENTER(env);
 	
-    SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
+  SyphonNameboundClient* boundClient = jlong_to_ptr(ptr);
 	[boundClient lockClient];
 	SyphonClient *client = [(SyphonNameboundClient*)boundClient client];
 	
-    SyphonImage* img = [client newFrameImage];    
+  SyphonImage* img = [client newFrameImage];    
     
 	NSSize texSize = [img textureSize];
 
-	NSNumber *name = [NSNumber numberWithInt:[img textureName]];
-	NSNumber *width = [NSNumber numberWithFloat:texSize.width];
-	NSNumber *height = [NSNumber numberWithFloat:texSize.height];
-	
-    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
-						 name, @"name", 
-						 width, @"width", 
-						 height, @"height", 
-						 nil];
-	
-	
-	JNFTypeCoercer* coecer = [JNFDefaultCoercions defaultCoercer];
-    [JNFDefaultCoercions addMapCoercionTo:coecer];
-    
-    imgdata = [coecer coerceNSObject:dic withEnv:env];
+  NSNumber *name = [NSNumber numberWithInt:[img textureName]];
+  NSNumber *width = [NSNumber numberWithFloat:texSize.width];
+  NSNumber *height = [NSNumber numberWithFloat:texSize.height];
+
+  NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:
+      name, @"name", 
+      width, @"width", 
+      height, @"height", 
+      nil];
+
+  jclass jc_arrayListClass = (*env)->FindClass(env, "java/util/ArrayList");
+  CHECK_NULL_RETURN(jc_arrayListClass, NULL);
+  jmethodID jm_arrayListCons = (*env)->GetMethodID(env, jc_arrayListClass, "<init>", "()V");
+  CHECK_NULL_RETURN(jm_arrayListCons, NULL);
+  jmethodID jm_listAdd = (*env)->GetMethodID(env, jc_arrayListClass, "add", "(Ljava/lang/Object;)Z");
+  CHECK_NULL_RETURN(jm_listAdd, NULL);
+  imgdata = (*env)->NewObject(env, jc_arrayListClass, jm_arrayListCons);
+  CHECK_NULL_RETURN(imgdata, NULL);
+
+  //JNFTypeCoercer* coecer = [JNFDefaultCoercions defaultCoercer];
+  //[JNFDefaultCoercions addMapCoercionTo:coecer];
+
+  ADD(imgdata, dic);
+  ADDNULL(imgdata);
+  //imgdata = [coecer coerceNSObject:dic withEnv:env];
 	
 	[img release];
 	
 	[boundClient unlockClient];
 	
-	JNF_COCOA_EXIT(env);
+	//JNF_COCOA_EXIT(env);
 	
 	return imgdata;	
 }
