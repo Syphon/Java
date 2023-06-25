@@ -365,6 +365,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = (
+						"/Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/include/**",
+						"$(SRCROOT)/../jdk/src/java.desktop/macosx/native/libosxapp",
+						"$(SRCROOT)/../jdk/src/java.base/share/native/libjava",
+						"$(SRCROOT)/../jdk/src/java.base/unix/native/libjava",
+				;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -395,6 +401,12 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = (
+						"/Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/include/**",
+						"$(SRCROOT)/../jdk/src/java.desktop/macosx/native/libosxapp",
+						"$(SRCROOT)/../jdk/src/java.base/share/native/libjava",
+						"$(SRCROOT)/../jdk/src/java.base/unix/native/libjava",
+				;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -438,10 +450,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "i386 x86_64 arm64";
 			};
 			name = Debug;
 		};
@@ -475,10 +487,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "i386 x86_64 arm64";
 			};
 			name = Release;
 		};
