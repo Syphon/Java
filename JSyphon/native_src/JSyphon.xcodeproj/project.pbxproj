@@ -10,8 +10,9 @@
 		1BB1292B135611510079EA84 /* jsyphon_JSyphonServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */; };
 		1BB129691356115B0079EA84 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		1BB1296A1356115B0079EA84 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A6135532BB0079EA84 /* OpenGL.framework */; };
-		1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127AC135532FD0079EA84 /* JavaVM.framework */; };
-		1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */; };
+		// removing for ARM, how do we leave this in for non-ARM? XXX
+		//1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127AC135532FD0079EA84 /* JavaVM.framework */; };
+		//1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */; };
 		1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */; };
 		1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */; };
 		1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */; };
@@ -46,8 +47,9 @@
 		1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonServer.h; sourceTree = "<group>"; };
 		1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonServer.m; sourceTree = "<group>"; };
 		1BB127A6135532BB0079EA84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
-		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
-		1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
+		// removing for ARM, how do we leave this in for non-ARM? XXX
+		//1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
+		//1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
 		1BB12926135611160079EA84 /* libJSyphon.jnilib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libJSyphon.jnilib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonClient.h; sourceTree = "<group>"; };
 		1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonImage.h; sourceTree = "<group>"; };
@@ -73,8 +75,9 @@
 				E2DDA92317D8DDD700C03F2F /* Syphon.framework in Frameworks */,
 				1BB129691356115B0079EA84 /* Cocoa.framework in Frameworks */,
 				1BB1296A1356115B0079EA84 /* OpenGL.framework in Frameworks */,
-				1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */,
-				1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */,
+				// removing for ARM, how do we leave this in for non-ARM? XXX
+				//1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */,
+				//1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +131,9 @@
 			children = (
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 				1BB127A6135532BB0079EA84 /* OpenGL.framework */,
-				1BB127AC135532FD0079EA84 /* JavaVM.framework */,
-				1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */,
+				// removing for ARM, how do we leave this in for non-ARM? XXX
+				//1BB127AC135532FD0079EA84 /* JavaVM.framework */,
+				//1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -357,7 +361,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
-					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
+					// removing for ARM, how do we leave this in for non-ARM? XXX
+					//"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/Release\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -395,7 +400,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
-					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
+					// removing for ARM, how do we leave this in for non-ARM? XXX
+					//"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/Release\"",
 				);
 				GCC_MODEL_TUNING = G5;
