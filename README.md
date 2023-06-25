@@ -45,7 +45,9 @@ cd native_src
 ./gen_headers.sh
 cd ..
 ```
-* On ARM macOS (Apple Silicon), you'll likely need a recent openjdk
+* On ARM macOS (Apple Silicon), you'll want a [Microsoft OpenJDK](https://learn.microsoft.com/en-us/java/openjdk/download) build downloaded and installed for the platform and may need to update the `microsoft` paths in `JSyphon/native_src/compile.sh` and `JSyphon/JSyphon.xcodeproj/project.pbxproj` to point to the correct include directory (currently pointing to v17)
+
+* On ARM macOS (Apple Silicon), you'll likely need a more recent openjdk for headers
 
 ```sh
 git clone --depth=1 https://github.com/openjdk/jdk/
