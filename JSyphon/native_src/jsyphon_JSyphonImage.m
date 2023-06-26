@@ -1,12 +1,4 @@
-#import <JavaVM/JavaVM.h>
-#import <JavaNativeFoundation/JavaNativeFoundation.h>	// JNI Cocoa helper 
-#import <JavaVM/jni.h>
-
-#import <Cocoa/Cocoa.h>
-#import <OpenGL/OpenGL.h>
-#import <Syphon/Syphon.h>
-
-#import <OpenGL/CGLMacro.h>
+#import "jsyphon_imports.h"
 
 
 JNIEXPORT jint JNICALL Java_jsyphon_JSyphonImage_textureName(JNIEnv * env, jobject jobj)

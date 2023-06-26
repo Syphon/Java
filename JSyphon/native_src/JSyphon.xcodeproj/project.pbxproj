@@ -10,11 +10,13 @@
 		1BB1292B135611510079EA84 /* jsyphon_JSyphonServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */; };
 		1BB129691356115B0079EA84 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		1BB1296A1356115B0079EA84 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127A6135532BB0079EA84 /* OpenGL.framework */; };
-		1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127AC135532FD0079EA84 /* JavaVM.framework */; };
-		1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */; };
 		1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */; };
 		1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */; };
 		1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */; };
+		2E02077A2A490BF200BDEA9B /* libjli.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0207792A490BF200BDEA9B /* libjli.dylib */; };
+		2E76E7572A491F0000C7D061 /* jsyphon_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E76E7532A491F0000C7D061 /* jsyphon_utils.h */; };
+		2E76E7582A491F0000C7D061 /* jsyphon_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E76E7552A491F0000C7D061 /* jsyphon_utils.m */; };
+		2E76E7592A491F0000C7D061 /* jsyphon_imports.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E76E7562A491F0000C7D061 /* jsyphon_imports.h */; };
 		415E166D166FC3830060AAB9 /* jsyphon_JSyphonServerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 415E166C166FC3830060AAB9 /* jsyphon_JSyphonServerList.m */; };
 		41928310166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4192830F166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h */; };
 		41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */; };
@@ -46,13 +48,15 @@
 		1BB1278A1355324B0079EA84 /* jsyphon_JSyphonServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonServer.h; sourceTree = "<group>"; };
 		1BB1278B1355324B0079EA84 /* jsyphon_JSyphonServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonServer.m; sourceTree = "<group>"; };
 		1BB127A6135532BB0079EA84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
-		1BB127AC135532FD0079EA84 /* JavaVM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaVM.framework; path = /System/Library/Frameworks/JavaVM.framework; sourceTree = "<absolute>"; };
-		1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaNativeFoundation.framework; path = /System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework; sourceTree = "<absolute>"; };
 		1BB12926135611160079EA84 /* libJSyphon.jnilib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libJSyphon.jnilib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB129D91356E7860079EA84 /* jsyphon_JSyphonClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonClient.h; sourceTree = "<group>"; };
 		1BB129DA1356E7860079EA84 /* jsyphon_JSyphonImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonImage.h; sourceTree = "<group>"; };
 		1BB12A0B13576F0C0079EA84 /* jsyphon_JSyphonImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonImage.m; sourceTree = "<group>"; };
 		1BB12A0D135776E50079EA84 /* jsyphon_JSyphonClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonClient.m; sourceTree = "<group>"; };
+		2E0207792A490BF200BDEA9B /* libjli.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjli.dylib; path = "../../../../../../../../../../Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/lib/libjli.dylib"; sourceTree = "<group>"; };
+		2E76E7532A491F0000C7D061 /* jsyphon_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_utils.h; sourceTree = SOURCE_ROOT; };
+		2E76E7552A491F0000C7D061 /* jsyphon_utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_utils.m; sourceTree = SOURCE_ROOT; };
+		2E76E7562A491F0000C7D061 /* jsyphon_imports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_imports.h; sourceTree = SOURCE_ROOT; };
 		32DBCF630370AF2F00C91783 /* JSyphon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSyphon_Prefix.pch; sourceTree = "<group>"; };
 		415E166C166FC3830060AAB9 /* jsyphon_JSyphonServerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jsyphon_JSyphonServerList.m; sourceTree = "<group>"; };
 		4192830F166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsyphon_JSyphonServerList.h; sourceTree = "<group>"; };
@@ -70,11 +74,10 @@
 			buildActionMask = 2147483647;
 			comments = "#!/bin/bash\necho \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\"\necho \"$SOURCE_ROOT/../native_libs/libJSyphon.dylib\"\n\ncp -RfL \"$BUILT_PRODUCTS_DIR/libJSyphon.dylib\" \"$SOURCE_ROOT/../native_libs/\"";
 			files = (
+				2E02077A2A490BF200BDEA9B /* libjli.dylib in Frameworks */,
 				E2DDA92317D8DDD700C03F2F /* Syphon.framework in Frameworks */,
 				1BB129691356115B0079EA84 /* Cocoa.framework in Frameworks */,
 				1BB1296A1356115B0079EA84 /* OpenGL.framework in Frameworks */,
-				1BB1296B1356115B0079EA84 /* JavaVM.framework in Frameworks */,
-				1BB1296C1356115B0079EA84 /* JavaNativeFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +93,7 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
+				2E0207772A490BF100BDEA9B /* Frameworks */,
 			);
 			name = JSyphon;
 			sourceTree = "<group>";
@@ -128,8 +132,6 @@
 			children = (
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 				1BB127A6135532BB0079EA84 /* OpenGL.framework */,
-				1BB127AC135532FD0079EA84 /* JavaVM.framework */,
-				1BB127B2135533180079EA84 /* JavaNativeFoundation.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -179,6 +181,14 @@
 			name = Client;
 			sourceTree = "<group>";
 		};
+		2E0207772A490BF100BDEA9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E0207792A490BF200BDEA9B /* libjli.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32C88E010371C26100C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,9 @@
 		41B03CC413CD8D9200CE4F36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2E76E7562A491F0000C7D061 /* jsyphon_imports.h */,
+				2E76E7532A491F0000C7D061 /* jsyphon_utils.h */,
+				2E76E7552A491F0000C7D061 /* jsyphon_utils.m */,
 				41B03CC713CD8D9200CE4F36 /* SyphonNameboundClient.h */,
 				41B03CC813CD8D9200CE4F36 /* SyphonNameboundClient.m */,
 			);
@@ -223,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB129DC1356E7860079EA84 /* jsyphon_JSyphonClient.h in Headers */,
+				2E76E7592A491F0000C7D061 /* jsyphon_imports.h in Headers */,
+				2E76E7572A491F0000C7D061 /* jsyphon_utils.h in Headers */,
 				1BB129DD1356E7860079EA84 /* jsyphon_JSyphonImage.h in Headers */,
 				41B03CCB13CD8D9200CE4F36 /* SyphonNameboundClient.h in Headers */,
 				41928310166FCDD9008F1FE8 /* jsyphon_JSyphonServerList.h in Headers */,
@@ -317,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BB1292B135611510079EA84 /* jsyphon_JSyphonServer.m in Sources */,
+				2E76E7582A491F0000C7D061 /* jsyphon_utils.m in Sources */,
 				1BB12A0E135776E50079EA84 /* jsyphon_JSyphonClient.m in Sources */,
 				41B03CCC13CD8D9200CE4F36 /* SyphonNameboundClient.m in Sources */,
 				415E166D166FC3830060AAB9 /* jsyphon_JSyphonServerList.m in Sources */,
@@ -357,7 +373,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
-					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/Release\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -365,7 +380,17 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = (
+					"/Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/include/**",
+					"$(SRCROOT)/../jdk/src/java.desktop/macosx/native/libosxapp",
+					"$(SRCROOT)/../jdk/src/java.base/share/native/libjava",
+					"$(SRCROOT)/../jdk/src/java.base/unix/native/libjava",
+				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/lib",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -389,13 +414,22 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/$(CONFIGURATION)/\"/**",
 					"$(inherited)",
-					"\"$(SYSTEM_LIBRARY_DIR)/Frameworks/JavaVM.framework/Versions/A/Frameworks\"",
 					"\"$(SRCROOT)/../../../Syphon-Framework/build/Release\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				HEADER_SEARCH_PATHS = (
+					"/Library/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/include/**",
+					"$(SRCROOT)/../jdk/src/java.desktop/macosx/native/libosxapp",
+					"$(SRCROOT)/../jdk/src/java.base/share/native/libjava",
+					"$(SRCROOT)/../jdk/src/java.base/unix/native/libjava",
+				);
 				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Java/JavaVirtualMachines/microsoft-17.jdk/Contents/Home/lib",
+				);
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -438,10 +472,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "i386 x86_64 arm64";
 			};
 			name = Debug;
 		};
@@ -475,10 +509,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
+				VALID_ARCHS = "i386 x86_64 arm64";
 			};
 			name = Release;
 		};
