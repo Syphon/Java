@@ -7,6 +7,15 @@ JSyphon - a Java Native Interface for Syphon. It has been tested with JOGL via P
 Getting Started:
 ====
 
+* Just run `install.sh` and all the following will be done! If anything fails, you'll need to investigate further, or follow the instructions below to install one by one.
+
+```sh
+sh -x install.sh
+```
+
+Installing Manually:
+====
+
 * After cloning the repository, use `git submodule update --init` to pull in the <a href="https://github.com/Syphon/Syphon-Framework">Syphon-Framework</a> and <a href="https://github.com/Syphon/Shared">Shared</a> repos
 
 * Update the Syphon-Framework and Shaded submodules:
@@ -22,10 +31,16 @@ git add Shared
 git commit -m "Updated Syphon submodules"
 ```
 
-* Change into the JSyphon subfolder: 
+* Change into the JSyphon subfolder:
 
 ```sh
 cd JSyphon
+```
+
+* Ensure you have ant installed, such as installing from [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://docs.brew.sh/Installation):
+
+```sh
+ant -version || brew install ant || sudo port install apache-ant
 ```
 
 * Build jsyphon.jar, by running `ant dist` inside the ant folder:
@@ -45,9 +60,20 @@ cd native_src
 ./gen_headers.sh
 cd ..
 ```
+
 * On ARM macOS (Apple Silicon), you'll want a [Microsoft OpenJDK](https://learn.microsoft.com/en-us/java/openjdk/download) build downloaded and installed for the platform and may need to update the `microsoft` paths in `JSyphon/native_src/compile.sh` and `JSyphon/JSyphon.xcodeproj/project.pbxproj` to point to the correct include directory (currently pointing to v17)
 
-* On ARM macOS (Apple Silicon), you'll likely need a more recent openjdk for headers
+```sh
+if [ `uname -m` = "arm64" ]; then
+  if ls /Library/Java/JavaVirtualMachines/microsoft-*.jdk 1> /dev/null 2>&1; then
+    echo Microsoft OpenJDK found;
+  else
+    curl -L https://aka.ms/download-jdk/microsoft-jdk-17.0.7-macOS-aarch64.pkg > microsoft-jdk-17.0.7-macOS-aarch64.pkg && open microsoft-jdk-17.0.7-macOS-aarch64.pkg;
+  fi
+fi
+```
+
+* On ARM macOS (Apple Silicon), you'll likely need a more recent openjdk for headers:
 
 ```sh
 git clone --depth=1 https://github.com/openjdk/jdk/
