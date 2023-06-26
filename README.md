@@ -103,3 +103,5 @@ Acknowledgments
 Initial JSyphon implementation by Skye Book and Anton Marini.
 
 Finishing up implementation of JSyphonClient, server listing, ClientTest example by Andres Colubri.
+
+Porting to Apple Silicon (macOS ARM64) + install.sh by [samy kamkar](https://github.com/samyk).

@@ -5,6 +5,7 @@ JSyphon/native_libs/libSyphon.dylib # symlink to Syphon generated from compile.h
 JSyphon/native_libs/JSyphon.so # ignore this lib?
 JSyphon/native_libs/Sypho
 JSyphon/native_libs/libJSyphon.jnilib # ignore this lib?
+JSyphon/microsoft-jdk-*.pkg
 #JSyphon/jar/jsyphon.jar # not sure if we want this?
 Syphon-Framework
 Syphon
