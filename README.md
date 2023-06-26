@@ -16,7 +16,11 @@ sh -x install.sh
 Installing Manually:
 ====
 
-* After cloning the repository, use `git submodule update --init` to pull in the <a href="https://github.com/Syphon/Syphon-Framework">Syphon-Framework</a> and <a href="https://github.com/Syphon/Shared">Shared</a> repos
+* After cloning the repository, pull in the <a href="https://github.com/Syphon/Syphon-Framework">Syphon-Framework</a> and <a href="https://github.com/Syphon/Shared">Shared</a> repos
+
+```sh
+git submodule update --init
+```
 
 * Update the Syphon-Framework and Shaded submodules:
 
@@ -37,13 +41,13 @@ git commit -m "Updated Syphon submodules"
 cd JSyphon
 ```
 
-* Ensure you have ant installed, such as installing from [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://docs.brew.sh/Installation):
+* Ensure you have Apache ant installed, such as installing from [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://docs.brew.sh/Installation):
 
 ```sh
 ant -version || brew install ant || sudo port install apache-ant
 ```
 
-* Build jsyphon.jar, by running `ant dist` inside the ant folder:
+* Build jsyphon.jar inside the ant folder:
 
 ```sh
 cd ant
