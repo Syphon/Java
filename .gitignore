@@ -1,3 +1,7 @@
 JSyphon/native_src/JSyphon.xcodeproj/project.xcworkspace/xcuserdata
 JSyphon/native_src/JSyphon.xcodeproj/xcuserdata
-Syphon-Framework
+Sphon-Framework
+Syphon
+.DS_Store
+jdk
+JSyphon/src/jsyphon/JSyphon*.class
